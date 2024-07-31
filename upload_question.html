@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scriptpost.js" defer></script>
+</head>
+<body>
+    <form onsubmit="submitData(event)">
+        <label class="label" for="question">Masukan Pertanyaan :</label>
+        <input class="input" type="text" id="input" name="input" required>
+        <label class="label" for="question">Masukan Key :</label>
+        <input class="key" type="text" id="key" name="key" required>
+        <button id="btn" type="submit">Submit</button>
+    </form>
+</body>
+</html>

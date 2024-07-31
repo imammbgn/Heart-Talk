@@ -3,3 +3,13 @@
   to = "/heart-talk.html"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/scriptget.js"
+  to = "/forbidden-page"
+  status = 403
+
+[[redirects]]
+  from = "/scriptpost.js"
+  to = "/forbidden-page"
+  status = 403
