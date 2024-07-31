@@ -1,6 +1,6 @@
 const apiUrl = 'https://parseapi.back4app.com/classes/questions';
-const appId = 'GD2an5fhqNJnBy9wZSl3d1a3fx30i7SgfPuaNwiJ';
-const restApiKey = 'RDxV07R4Ykh3F81T5Zno7xYMsQiLetwyCPdzl46U';
+const appId = 'YOUR_APP_ID';
+const restApiKey = 'YOUR_API_KEY';
 
 function submitData(event) {
     event.preventDefault();
