@@ -8,27 +8,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-#card {
-    width: 250px;
-    height: 330px;
-    padding: 20px;
-    background-color: rgb(23, 23, 23);
-    border: 1px solid #e6e6e6;
-    border-radius: 13px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    -ms-border-radius: 13px;
-    -o-border-radius: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#question {
-    color: #e6e6e6;
+    background-image: url('../assets/home-bg.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 #btn {
@@ -62,6 +45,7 @@ form {
     font-weight: 600;
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #e6e6e6;
 }
 
 .input {

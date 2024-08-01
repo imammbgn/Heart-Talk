@@ -1,15 +1,15 @@
 [[redirects]]
   from = "/"
-  to = "/heart-talk.html"
+  to = "/page/heart-talk.html"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/scriptget.js"
+  from = "/js/scriptget.js"
   to = "/forbidden-page"
   status = 403
 
 [[redirects]]
-  from = "/scriptpost.js"
+  from = "/js/scriptpost.js"
   to = "/forbidden-page"
   status = 403

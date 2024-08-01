@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../assets/bg.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Poppins, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 250px;
+    height: 360px;
+    perspective: 1000px;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.card.flip-front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+
+}
+.card.flip-back {
+    transform: rotateY(540deg);
+    -webkit-transform: rotateY(540deg);
+    -moz-transform: rotateY(540deg);
+    -ms-transform: rotateY(540deg);
+    -o-transform: rotateY(540deg);
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.front {
+    background-image: url(../assets/front-card.jpg);
+}
+
+.back {
+    background-image: url("../assets/back-card.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.question {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#btn {
+    width: 150px;
+    height: 45px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: larger;
+    font-family: Poppins;
+    border: none;
+    background-color: #fd4736;
+    color: #e6e6e6;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

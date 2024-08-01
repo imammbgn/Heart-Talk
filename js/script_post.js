@@ -1,6 +1,4 @@
-const apiUrl = 'https://parseapi.back4app.com/classes/questions';
-const appId = 'YOUR_APP_ID';
-const restApiKey = 'YOUR_API_KEY';
+const apiUrl = '/.netlify/functions/post-questions'
 
 function submitData(event) {
     event.preventDefault();
@@ -18,8 +16,6 @@ function submitData(event) {
         fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'X-Parse-Application-Id': appId,
-                'X-Parse-REST-API-Key': restApiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -42,6 +38,4 @@ function submitData(event) {
             alert('Gagal menambahkan pertanyaan. Silakan coba lagi.');
         });
     }
-    // Mengirim data ke Back4App
-    
 }
