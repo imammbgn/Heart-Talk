@@ -1,13 +1,29 @@
 let questions = []
 
-fetch('/.netlify/functions/get-questions')
-    .then(response => response.json())
-    .then(data => {
-        questions = data.results.map(item => item.question);
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+const apiUrl = 'https://parseapi.back4app.com/classes/questions';
+const appId = 'GD2an5fhqNJnBy9wZSl3d1a3fx30i7SgfPuaNwiJ';
+const restApiKey = 'RDxV07R4Ykh3F81T5Zno7xYMsQiLetwyCPdzl46U';
+
+fetch(apiUrl, {
+    method: 'GET',
+    headers: {
+        'X-Parse-Application-Id': appId,
+        'X-Parse-REST-API-Key': restApiKey,
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+})
+.then(data => {
+    questions = data.results.map(item => item.question);
+})
+.catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+});
 
 const button = document.getElementById("btn");
 const card = document.querySelector(".card");
