@@ -1,4 +1,4 @@
-const apiUrl = '/.netlify/functions/post-question/post-question'
+const apiUrl = '/.netlify/functions/post/post-question'
 
 function submitData(event) {
     event.preventDefault();
