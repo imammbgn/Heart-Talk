@@ -1,6 +1,6 @@
 let questions = []
 
-fetch('/.netlify/functions/get-question')
+fetch('/.netlify/functions/get-question/get-question')
     .then(response => response.json())
     .then(data => {
         questions = data.results.map(item => item.question);
