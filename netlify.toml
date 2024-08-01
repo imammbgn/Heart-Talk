@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/"
-  to = "/page/heart-talk.html"
+  to = "/main.html"
   status = 200
   force = true
 
