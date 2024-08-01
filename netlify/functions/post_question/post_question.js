@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async function(event, context) {
     if (event.httpMethod === 'POST') {
-        const apiUrl = 'https://parseapi.back4app.com/classes/Question';
+        const apiUrl = 'https://parseapi.back4app.com/classes/questions';
         const appId = process.env.APP_ID; // API key disimpan dalam variabel lingkungan
         const restApiKey = process.env.REST_API_KEY;
 
